@@ -1,0 +1,152 @@
+.heading {
+    background: white;
+    height: 5%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.swiper-container {
+    display: block;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.swiper-slide {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Image Accordions General */
+.container-general {
+    margin: 0 auto;
+    width: 1200px;
+
+    .gallery-wrap {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 400px;
+
+        .item {
+            flex: 1;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: none;
+            transition: all 0.8s ease;
+            margin-right: 5px;
+            margin-left: 5px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: rgb(212, 244, 242);
+
+            &:hover {
+                flex: 3;
+            }
+        }
+    }
+}
+
+.wrap-effect-4 .item {
+    transition: box-shadow 0.3s, filter 0.3s;
+    &:hover {
+        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+        filter: saturate(2) contrast(120%);
+    }
+
+    &:first-of-type {
+        background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4226693/galshir-iphone-x-lemonade.gif');
+    }
+
+
+    &:nth-of-type(2) {
+        background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4475663/galshir-musical-instruments.gif');
+    }
+
+    &:nth-of-type(3) {
+        background-image: url('https://cdn.dribbble.com/users/729829/screenshots/5431797/galshir-lemonade-ring.gif');
+    }
+
+    &:nth-of-type(4) {
+        background-image: url('https://cdn.dribbble.com/users/729829/screenshots/4419736/galshir-lemonade-bike.gif');
+    }
+
+    &:first-of-type:hover {
+        background-image: url('../image/cloud_music/1.jpg');
+    }
+
+    &:first-of-type:hover .item-content {
+        display: none;
+    }
+
+    &:nth-of-type(2):hover {
+        background-image: url('../image/cloud_music/2.jpg');
+    }
+
+    &:nth-of-type(3):hover {
+        background-image: url('../image/cloud_music/3.jpg');
+    }
+
+    &:nth-of-type(4):hover {
+        background-image: url('../image/cloud_music/4.jpg');
+    }
+}
+.wrap-effect-4 .item-content {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.inspire {
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+
+    &:after {
+        background: #38ef7d;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .4;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: -10;
+    }
+
+    &:hover {
+        &:after {
+            left: 120%;
+            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(10deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-10deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(5deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0)
+    }
+}

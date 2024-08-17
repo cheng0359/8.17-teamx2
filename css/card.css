@@ -1,0 +1,109 @@
+.card-container {
+    /* 100%的窗口高度 */
+    /* 弹性布局 水平+垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    /* 相对定位 */
+    position: relative;
+    width: 350px;
+    height: 250px;
+    margin: 20px;
+    background-color: rgb(217, 217, 217);
+    border-radius: 20px;
+    /* 居中 */
+    align-items: center;
+    color: #fff;
+    /* 阴影 */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.card .card-text {
+    margin-top: 30px;
+}
+
+.card .card-text p {
+    font-size: 30px;
+}
+
+.card .photo .photo-1 {
+    /* 保持原有尺寸比例,裁切长边 */
+    object-fit: cover;
+}
+
+/* 默认大图 */
+.card .photo {
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* 初始位置从右边出发 */
+    transform: translateX(75px);
+    transition: transform 1s, height 1s;
+    height: 120%;
+}
+
+.card .photo .photo-1 {
+    height: 100%;
+}
+
+.card .photo-2 {
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    height: 80%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card:hover .photo-2 {
+    opacity: 1;
+    transition: opacity 0.5s 0.3s;
+}
+
+/* 鼠标移入变小图 */
+.card:hover .photo {
+    transform: translateX(-130px);
+    height: 100%;
+    transition: transform 1s, height 1s;
+}
+
+.card:hover h1 {
+    top: 170px;
+}
+
+.card h2 {
+    margin-top: 220px;
+    width: 80%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.card p {
+    width: 90%;
+    text-indent: 32px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.card a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 32px;
+    border-radius: 8px;
+}
+
+.card a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
